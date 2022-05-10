@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.scss';
 
-function Login() {
+function SignIn() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(true);
 
@@ -36,4 +36,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignIn;
