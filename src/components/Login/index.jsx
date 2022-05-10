@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './styles.module.scss';
 
 function Login() {
   const [showPassword, setShowPassword] = useState(true);
@@ -11,21 +12,21 @@ function Login() {
     }
   };
   return (
-    <main>
+    <main className={styles.container}>
       <form>
         <label htmlFor="user">
           <input type="text" id="user" name="user" placeholder="Usuário" />
         </label>
         <label htmlFor="lname">
           <input type={showPassword ? 'password' : 'text'} id="password" name="password" placeholder="Senha" />
-          <button type="button" onClick={() => handleShowPassword()}>
+          <button className={styles.containerBtnIcons} type="button" onClick={() => handleShowPassword()}>
             <i className="bi bi-eye-slash-fill" />
           </button>
         </label>
-        <button type="button">
+        <button className={styles.containerBtnLogin} type="button">
           Login
         </button>
-        <button type="button">
+        <button className={styles.containerBtnRegister} type="button">
           Registrar
         </button>
       </form>
