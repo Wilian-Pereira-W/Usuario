@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.scss';
 
 function Login() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(true);
 
   const handleShowPassword = () => {
@@ -26,7 +28,7 @@ function Login() {
         <button className={styles.containerBtnLogin} type="button">
           Login
         </button>
-        <button className={styles.containerBtnRegister} type="button">
+        <button className={styles.containerBtnRegister} onClick={() => navigate('/register')} type="button">
           Registrar
         </button>
       </form>
