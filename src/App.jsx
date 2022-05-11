@@ -8,6 +8,7 @@ import {
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Users from './pages/Users';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/users" element={<Users />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
