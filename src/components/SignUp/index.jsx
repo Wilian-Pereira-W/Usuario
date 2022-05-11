@@ -20,25 +20,31 @@ function SignUp() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = {
-      email: user,
-      password,
-      name,
-    };
-    api.post('authaccount/registration', data)
-      .then(() => {
-        setUser('');
-        setPassword('');
-        setName('');
-        navigate('/');
-      })
-      .catch((error) => {
-        setUser('');
-        setPassword('');
-        setName('');
-        // eslint-disable-next-line no-console
-        console.log(error);
-      });
+    const emailFormat = /\S+@\S+\.\S+/;
+    const isValid = emailFormat.test(user);
+    if (isValid) {
+      const data = {
+        email: user,
+        password,
+        name,
+      };
+      api.post('authaccount/registration', data)
+        .then(() => {
+          setUser('');
+          setPassword('');
+          setName('');
+          navigate('/');
+        })
+        .catch((error) => {
+          setUser('');
+          setPassword('');
+          setName('');
+          // eslint-disable-next-line no-console
+          console.log(error);
+        });
+    } else {
+      alert('Formato do usuário inválido! Exemplo valido: teste.teste@teste.com');
+    }
   };
 
   return (
