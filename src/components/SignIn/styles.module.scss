@@ -15,6 +15,9 @@
       border-width: 0 0 1px;
       height: 56px;
       width: 390px;
+      background: #DEE3EB;
+      border-radius: 4px 4px 0px 0px;
+      margin-bottom: 16px;
     }
   }
 }
@@ -24,8 +27,9 @@
   position: absolute;
   display: flex;
   margin-left: 350px;
-  margin-top: -30px;
+  margin-top: -45px;
   background: transparent;
+
 }
 
 .containerBtnLogin {
