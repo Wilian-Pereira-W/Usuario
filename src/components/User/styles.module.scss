@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+
+  h1 {
+    margin-left: 120px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 64px;
+    color: #000;
+  }
+  table {
+    margin-left: 120px;
+    border: 1px solid  #CCE5FF;
+
+    th {
+      background: #CCE5FF;
+      height: 40px;
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 16px;
+      color: #00639C;
+    }
+  }
+}
+
+.containerId {
+  text-align: center;
+  height: 40px;
+  border: 0px 0px 1px solid  #CCE5FF;
+  margin: 0;
+  padding: 0;
+  width: 190px;
+}
+
+.containerNome{
+  text-align: left;
+  padding-left: 20px;
+}
