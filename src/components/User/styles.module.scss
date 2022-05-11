@@ -43,3 +43,15 @@
   text-align: left;
   padding-left: 20px;
 }
+
+@media (max-width: 428px){
+  .container {
+    h1{
+      margin-left: 10px;
+    }
+    table{
+      margin-left: 10px;
+      width: 400px
+    }
+  }
+};
